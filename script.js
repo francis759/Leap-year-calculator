@@ -14,7 +14,8 @@ function clearEntry(){
 }
 
 function generateRandomYear(){
-  document.getElementById("year-holder").value = Math.round(Math.random()*(1001))+1582;
+  document.getElementById("year-holder").value = Math.floor(Math.random() * (9999 - 1582 + 1) + 1582);
+  document.getElementById("answer-holder").innerHTML = "";
 }
 
 function displayLeapYearResult(){
@@ -32,7 +33,7 @@ function displayLeapYearResult(){
       }
       else{
         result.style.color = "blue";
-        result.innerHTML="Is a Common Year"
+        result.innerHTML="Is a Normal Year"
       }
     }
 }
